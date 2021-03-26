@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import Profile from './profile/Profile'
+import amine from './amine.jpg'
+
 
 function App() {
+ const handleName = () => {
+   alert('this profile is under authority of Med Amine')
+ }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style= {{color:"red" , backgroundColor:"black"}}>
+    <Profile fullName="Mohamed Amine Hamdi" bio="32 years old"  profession="student" handleName={handleName}>
+      <img src={amine} alt='amine'/>   </Profile>
     </div>
   );
 }
 
-export default App;
+export default App
+
+
+
+
